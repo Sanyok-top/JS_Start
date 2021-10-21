@@ -422,11 +422,88 @@ console.log('124',' ',realEstateAgency[0]);
 console.log('125',' ',realEstateAgency[0]['name']);
 console.log('126',' ',realEstateAgency[1].name);
 
+//! Условия и циклы
+//? Условная конструкция if (используется для запуска кода если некое условие истино (true))
+let name_5 = "Nikolababayan";
+console.log('127',' ',"Hello," + name_5);
+if (name_5.length > 10){
+	console.log('128',' ',"Very long name!!!");
+}
+if (name_5.length < 5){
+	console.log('129',' ',"Not a very long name!!!");
+}
+
+//? Условная конструкция if... else (используется для запуска кода если некое условие истино (true) при невыполнении условия (false) выполняется действие(тело)else)
+
+let name_6 = "Nik";
+console.log('130',' ',name_6);
+if ( name_6 > 5){
+	console.log('131',' ', "Veri long name !!!")
+}
+else{
+	console.log('132',' ',"Not a veri long name");
+}
+
+//? Цепочка из конструкций if... else (используется для проверки нескольких условий и сделать что-то, если одно из них дает true)
+
+let condition_1 = false;
+let condition_2 = true;
+let condition_3 = false;
+let condition_4 = false;
+
+if (condition_1){
+	console.log('133',' ',"тело_1 - Сделай это, если условие 1 истинно");
+} else if (condition_2){
+	console.log('134',' ',"тело_2 - Сделай это, если условие 2 истино");
+} else if (condition_3){
+	console.log('135',' ',"тело_3 - Сделай это, если условие 3 истино");
+} else if (condition_4){
+	console.log('136',' ',"тело_4 - Сделай это, если условие 4 истино");
+} else{
+	console.log('137',' ',"тело_else - Иначе сделай это");
+}
+
+/* пример (Напишите программу с переменной name. Если в этой переменной находится
+ваше имя, напечатайте: «Привет мне!» — иначе напечатайте: «Привет,
+незнакомец!» (Подсказка: используйте === для сравнения переменной name
+с вашим именем.)
+Теперь дополните программу, чтобы она здоровалась с вашим папой,
+если в name его имя, и с вашей мамой, если в name ее имя. Если же там
+что-то иное, по-прежнему печатайте «Привет, незнакомец!».)*/
+
+//let name_3 = "Oleksandr";
+let name_3 = "Yrik";
+//let name_3 = "Lidi";
+
+if (name_3 === "Oleksandr"){
+	console.log('138',' ',"Hello me !");
+} else if (name_3 === "Yrik"){
+	console.log('139',' ',"Hello son !");
+} else {
+	console.log('140',' ',"Hello Lidi !");
+} 
+
+//? Цикл While (while – Проверяет условие перед каждой итерацией.)
+
+/* while (condition){
+	console.log("Делаем что-то");
+	i++;
+}*/
+
+let sheepCounted = 0;
+while (sheepCounted < 10 ){
+	console.log('14' + sheepCounted + ' ',"Посчитано овец:" + sheepCounted + "!");
+	sheepCounted ++;
+}
+//?do..while – Проверяет условие после каждой итерации.
+//* do{
+//* тело цыкла
+//*}while(condition);
+//*Такая форма синтаксиса оправдана, если вы хотите, чтобы тело цикла выполнилось хотя бы один раз, даже если условие окажется ложным. На практике чаще используется форма с предусловием: while(…) {…}
 
 
 
-
-
+//?for (;;) – Проверяет условие перед каждой итерацией, есть возможность задать дополнительные настройки.
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
